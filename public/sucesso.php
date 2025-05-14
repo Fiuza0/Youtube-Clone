@@ -1,0 +1,1 @@
+<h1>Sucesso! Filme <?php echo $_GET['video']; ?> inserido</h1>
