@@ -1,6 +1,6 @@
 <?php
 
-namespace Models;
+namespace motionPlay\Model;
 
 class Score
 {
@@ -20,6 +20,8 @@ class Score
     }
     public function calcularNota(float $nota): void
     {
+        int $soma=0;
+        float $itens=0;
         foreach($this->listaNota as $nota){
             $soma += $nota;
             $itens += 1; 

@@ -1,8 +1,12 @@
 <?php
 
-use Models\Score;
-use Models\Video;
+namespace motionPlay;
 
+use motionPlay\Model\{
+    Video,
+    Genero,
+    Score,
+};
 function exibeMensagemLancamento(int $ano)  {
     if ($ano >= 2025) {
         return "Lançamento";
@@ -17,13 +21,10 @@ function lerVideos($diretorio){
     $conteudo = file_get_contents($diretorio);
     return $arrayAssociativo = json_decode($conteudo, true);
 }
-
-require __DIR__.'/src/Models/Video.php';
-require __DIR__.'/src/Models/Score.php';
-function criaVideos(string $nome, int $dataPostagem, float $nota, string $genero): Video {
-    $no = new Score();
-    $no->addLista($nota);
-    $vid = new Video($nome,$dataPostagem,$no, $genero);
+function criaVideos(string $nome, int $dataPostagem, float $nota, Genero $genero, array $listaNota): Video {
+    $score = new Score($listaNota, $nota);
+    $score->addLista($nota);
+    $video = new Video($nome,$dataPostagem,$score, $genero);
     
-    return $vid;
+    return $video;
 }

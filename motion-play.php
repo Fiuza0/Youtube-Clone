@@ -1,5 +1,11 @@
 <?php
- require __DIR__ . "/funcoes_iniciais.php";
+
+use motionPlay\Model\{
+    Video,
+    Genero,
+    Score
+};
+
 
  echo "Bem vindo(a) ao Motion Play\n";
 
