@@ -1,7 +1,5 @@
 <?php
 
-namespace motionPlay;
-
 use motionPlay\Model\{
     Video,
     Genero,

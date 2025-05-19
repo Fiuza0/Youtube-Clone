@@ -1,0 +1,19 @@
+{
+    "name": "fiuza0/yt-clone",
+    "description": "Youtube Clone php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Fiuza0\\YtClone\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fiuza0",
+            "email": "uskarin0122@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}
