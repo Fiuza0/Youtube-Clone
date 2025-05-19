@@ -1,6 +1,6 @@
 <?php
 
-namespace motionPlay\Model;
+namespace Fiuza0\YoutubeClone\Model;
 
 class Video
 {

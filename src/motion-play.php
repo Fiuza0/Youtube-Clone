@@ -1,6 +1,6 @@
 <?php
 
-use motionPlay\Model\{
+use Fiuza0\YoutubeClone\Model\{
     Video,
     Genero,
     Score
