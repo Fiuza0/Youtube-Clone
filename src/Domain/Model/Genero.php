@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiuza0\YoutubeClone\Model;
+namespace Fiuza0\YoutubeClone\Domain\Model;
 
 enum Genero: string
 {

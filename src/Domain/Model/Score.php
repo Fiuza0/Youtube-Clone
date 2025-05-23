@@ -1,24 +1,23 @@
 <?php
 
-namespace motionPlay\Model;
+namespace Fiuza0\YoutubeClone\Domain\Model;
 
 class Score
 {
     private function __construct(
-        private array $listaNota,
-        private float $nota
+        public readonly array $listaNota,
     ){
         $this->listaNota = [];
     }
     
     public function getNota(): string
     {
-        return $this->nota;
+        return $this->calcularNota();
     }
     public function addLista(float $nota): void{
         $this->listaNota[] = $nota;
     }
-    public function calcularNota(float $nota): void
+    public function calcularNota(): float
     {
         $soma = 0;
         $itens = 0;
@@ -26,6 +25,7 @@ class Score
             $soma += $nota;
             $itens += 1; 
         }
-        $this->nota = $soma/$itens;
+        $nota = $soma/$itens;
+        return $nota;
     }
 }

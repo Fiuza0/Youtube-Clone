@@ -1,12 +1,6 @@
 <?php
 
-use Fiuza0\YoutubeClone\Model\{
-    Video,
-    Genero,
-    Score
-};
-
-
+require "vendor/autoload.php";
  echo "Bem vindo(a) ao Motion Play\n";
 
  $nomeVideo = "Godfather";
@@ -15,7 +9,7 @@ use Fiuza0\YoutubeClone\Model\{
  $incluidoNoPlano = true;
 
  echo exibeMensagemLancamento($dataPostagem);
- echo $nomeFilme;
+ echo $nomeVideo;
 $video = ["nome:" => "Up! Altas Aventuras",
          "lançamento"=> "2010",
          "nota"=> "9.2",
