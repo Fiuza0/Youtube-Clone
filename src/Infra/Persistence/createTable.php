@@ -9,9 +9,6 @@ $sqlTableCreator =
     nota REAL NOT NULL,
     genero TEXT NOT NULL
 )
-
-
-
 ';
 
 

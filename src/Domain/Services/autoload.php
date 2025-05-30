@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function (string $className) {
-    $caminho = str_replace('motionPlay', 'src', $className) . '.php';
+    $caminho = str_replace('YoutubeClone', 'src', $className) . '.php';
     $caminho = str_replace('\\', DIRECTORY_SEPARATOR, $caminho);
     
     $caminhoCompleto = __DIR__ . DIRECTORY_SEPARATOR . $caminho;

@@ -59,8 +59,8 @@ class PdoVideoRepository implements VideoRepository
         $success = $stmt->execute([
             $video->nome,
             $video->dataPostagem,
-            $video->nota,
-            $video->genero,
+            $video->nota->getNota(),
+            $video->genero->value,
             $video->id
         ]);
         return $success;
@@ -75,12 +75,14 @@ class PdoVideoRepository implements VideoRepository
     public function hydradeVideoList(\PDOStatement $statement): array
     {
         $videos = [];
+        $listanota = [];
+        //Escrever um while para capturar a lista de notas e associar ao video
         while ($row = $statement->fetch(\PDO::FETCH_ASSOC)) {
             $videos[] = new Video(
                 $row['id'],
                 $row['nome'],
                 $row['dataPostagem'],
-                new Score($row['nota']),
+                new Score($row['nota'],null),
                 $row['genero']
             );
         }

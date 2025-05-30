@@ -29,7 +29,7 @@ function criaVideos(int $id,string $nome, int $dataPostagem, float $nota, Genero
 {
     $connection = conexao::conectar();
     $videoRepository = new PdoVideoRepository($connection);
-    $score = new Score($listaNota);
+    $score = new Score($listaNota, null);
     $score->addLista($nota);
     $video = new Video($id, $nome,$dataPostagem,$score, $genero);
     $video->defineId($id);

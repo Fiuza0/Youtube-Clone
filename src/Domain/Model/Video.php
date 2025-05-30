@@ -2,13 +2,15 @@
 
 namespace Fiuza0\YoutubeClone\Domain\Model;
 
+use DateTimeImmutable;
+
 class Video
 {
     
     private function __construct(
         public readonly ?int $id,
         public readonly string $nome,
-        public readonly int $dataPostagem,
+        public readonly DateTimeImmutable $dataPostagem,
         public readonly Score $nota,
         public readonly Genero $genero
     ){
